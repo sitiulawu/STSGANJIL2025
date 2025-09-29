@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Simulasi ATM</title>
 </head>
-
 <body>
-  
-</body>
+  <h2>Simulasi ATM</h2>
+  <script>
+    let saldo = 1000000; // saldo awal Rp 1.000.000
+    alert("Saldo Awal: Rp " + saldo);
 
+    let pilihan = prompt("Pilih transaksi:\n1. Tarik Tunai\n2. Setor Tunai");
+
+    if (pilihan == "1") {
+      let tarik = parseInt(prompt("Masukkan jumlah tarik:"));
+      if (tarik > saldo) {
+        alert("Error: Saldo tidak cukup!");
+      } else {
+        saldo -= tarik;
+        alert("Berhasil tarik: Rp " + tarik + "\nSaldo Akhir: Rp " + saldo);
+      }
+    } else if (pilihan == "2") {
+      let setor = parseInt(prompt("Masukkan jumlah setor:"));
+      saldo += setor;
+      alert("Berhasil setor: Rp " + setor + "\nSaldo Akhir: Rp " + saldo);
+    } else {
+      alert("Pilihan tidak valid");
+    }
+  </script>
+</body>
 </html>
