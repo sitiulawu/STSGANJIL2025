@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jumlah Hari dalam Bulan</title>
+  </head>
+  <body>
+    <script>
+      bulan = prompt("Masukkan nama bulan");
+
+      if (bulan == "januari" || bulan == "maret" || bulan == "mei" ||
+          bulan == "juli" || bulan == "agustus" || bulan == "oktober" || bulan == "desember") {
+        
+        alert("Bulan ini memiliki 31 hari.");
+        console.log("Bulan ini memiliki 31 hari.");
+
+      } else if (bulan == "februari") {
+        
+        alert("Bulan ini memiliki 28 atau 29 hari.");
+        console.log("Bulan ini memiliki 28 atau 29 hari.");
+
+      } else if (bulan == "april" || bulan == "juni" || bulan == "september" || bulan == "november") {
+        
+        alert("Bulan ini memiliki 30 hari.");
+        console.log("Bulan ini memiliki 30 hari.");
+
+      } else {
+        
+        alert("Nama bulan tidak valid.");
+        console.log("Nama bulan tidak valid.");
+      }
+    </script>
+  </body>
+</html>
